@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 
 function ChatItem({ item, currentUser }) {
-  // Sistem mesajları ortada gri
+  // Sistem mesajları 
   if (item.system) {
     return <div className={styles.systemMessage}>{item.message}</div>;
   }

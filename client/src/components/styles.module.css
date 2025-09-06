@@ -1,53 +1,52 @@
 .chatlist {
-  flex: 1; /* kalan alanı kapla */
+  flex: 1;
   overflow-y: auto;
   background-color: #f5f5f5;
   padding: 10px;
   border-radius: 8px;
-  margin: 0 10px; /* yan boşluklar */
+  margin: 0 10px;
 }
 
 .chatlist > div {
   display: flex;
   flex-direction: column;
-  min-height: 100%; /* minimum yükseklik */
-  width: 100%; /* tam genişlik */
+  min-height: 100%;
+  width: 100%;
 }
 
 .textInput {
-  flex: 1; /* kalan alanı kapla */
+  flex: 1;
   border: solid 1px #ddd;
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
   background-color: #f0f0f0;
-  margin-right: 8px; /* buton ile arasında boşluk */
-  /* box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08); */
+  margin-right: 8px;
 }
 
 .chatItem {
   border: 0.5px solid rgba(0, 0, 0, 0.02);
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08);
-  max-width: 50%; /* Balon genişliği */
+  max-width: 50%;
   padding: 10px 15px;
   margin: 5px 0;
-  border-bottom-left-radius: 0; /* balon ucu için */
+  border-bottom-left-radius: 0;
   border-bottom-right-radius: 20px;
-  background-color: #e5e5ea; /* karşı mesaj rengi */
+  background-color: #e5e5ea;
   word-wrap: break-word;
   display: inline-block;
-  width: fit-content; /* içeriğe göre genişlik */
+  width: fit-content;
 }
 
 .chatItem.right {
   background: #007bff;
   color: white;
-  max-width: 50%; /* aynı maksimum genişlik */
-  margin-left: auto; /* sağa yaslar */
+  max-width: 50%;
+  margin-left: auto;
   text-align: right;
-  border-bottom-right-radius: 0; /* balon ucu için */
+  border-bottom-right-radius: 0;
   border-bottom-left-radius: 20px;
-  width: fit-content; /* içeriğe göre genişlik */
+  width: fit-content;
 }
 
 .nicknameInput {
@@ -68,15 +67,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px); /* tam ekran - 40px üst - 40px alt */
-  max-width: 480px; /* mobil genişlik */
+  height: calc(100vh - 80px);
+  max-width: 480px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f0f0f0;
-  margin: 40px auto; /* yukarıdan ve aşağıdan 40px */
+  margin: 40px auto;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden; /* scroll tamamen kalkar */
+  overflow: hidden;
 }
 
 .chatForm {
@@ -86,10 +85,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* input ile buton arasındaki boşluk */
+  gap: 8px;
   padding: 10px;
-  margin: 10px; /* yan boşluklar */
-  flex-shrink: 0; /* küçülmesin */
+  margin: 10px;
+  flex-shrink: 0;
 }
 .userevents {
   display: flex;
@@ -100,8 +99,8 @@
   border-bottom: 1px solid #ccc;
   border-radius: 8px;
   font-size: 14px;
-  margin: 10px; /* yan boşluklar */
-  flex-shrink: 0; /* küçülmesin */
+  margin: 10px;
+  flex-shrink: 0;
 }
 button {
   padding: 10px 20px;
@@ -117,10 +116,10 @@ button:hover {
 }
 .appBackground {
   background-color: #f5f5f5;
-  min-height: 100vh; /* minimum tam ekran yüksekliği */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* container'ı üstten başlat */
+  align-items: flex-start;
   padding: 0;
 }
 
@@ -130,15 +129,15 @@ button:hover {
   align-items: center;
   flex-direction: column;
   height: 733px;
-  max-width: 480px; /* mobil genişlik */
+  max-width: 480px;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f0f0f0;
-  margin: 40px auto; /* üstten ve alttan 60px, ortalama için auto */
+  margin: 40px auto;
   margin-bottom: 100 px;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden; /* scroll tamamen kalkar */
+  overflow: hidden;
 }
 
 .logoutButton {
@@ -163,7 +162,7 @@ button:hover {
   color: #666;
   font-size: 14px;
   font-style: italic;
-  margin: 10px auto; /* üst-alt 10px, yanlar otomatik (ortalama) */
+  margin: 10px auto;
   padding: 5px 10px;
   background-color: #f8f9fa;
   border-radius: 15px;
@@ -172,34 +171,33 @@ button:hover {
   width: fit-content;
 }
 
-/* Mobil responsive tasarım */
 @media (max-width: 480px) {
   .container {
-    height: calc(100vh - 80px); /* yine 40px üst ve alt margin */
-    max-width: calc(100vw - 20px); /* yan boşluklar için */
+    height: calc(100vh - 80px);
+    max-width: calc(100vw - 20px);
     border-radius: 10px;
-    margin: 40px 10px; /* yukarıdan 40px, yanlardan 10px */
+    margin: 40px 10px;
   }
-  
+
   .appBackground {
     padding: 0;
   }
-  
+
   .chatlist {
     margin: 0 5px;
   }
-  
+
   .chatForm {
     margin: 5px;
     padding: 8px;
   }
-  
+
   .userevents {
     margin: 5px;
     padding: 8px;
   }
-  
+
   .textInput {
-    font-size: 16px; /* iOS zoom'u önlemek için */
+    font-size: 16px;
   }
 }

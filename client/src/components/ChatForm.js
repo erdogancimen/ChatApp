@@ -9,8 +9,8 @@ function ChatForm({ nickname }) {
     e.preventDefault();
     if (!message.trim()) return;
 
-    sendMessage(message); // artık sadece backend'e gönderiyoruz
-    setMessage(""); // inputu temizle
+    sendMessage(message); 
+    setMessage(""); 
   };
 
   return (

@@ -4,7 +4,7 @@ let socket;
 export const init = () => {
   if (socket) return socket;
 
-  const token = localStorage.getItem("userToken"); // token varsa gönder
+  const token = localStorage.getItem("userToken"); 
   socket = io("http://localhost:3001", {
     transports: ["websocket"],
     auth: { token },
@@ -16,12 +16,11 @@ export const init = () => {
   return socket;
 };
 
-// join-room event’i token döndürüyor
 export const joinRoom = (nickname, callback) => {
   if (!socket) return;
   socket.emit("join-room", nickname, (serverToken) => {
     if (serverToken) {
-      localStorage.setItem("userToken", serverToken); // token’i sakla
+      localStorage.setItem("userToken", serverToken); 
       if (callback) callback(serverToken);
     }
   });

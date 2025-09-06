@@ -20,7 +20,7 @@ function Container() {
   useEffect(() => {
     const socket = init();
 
-    // reconnect-user geldiğinde nickname state güncellenir
+    
     subscribeReconnectUser(({ nickname }) => {
       setNickname(nickname);
     });
@@ -31,11 +31,11 @@ function Container() {
 
   const handleJoin = (nick) => {
     joinRoom(nick, () => {
-      setNickname(nick); // join-room'dan sonra state güncelleniyor
+      setNickname(nick); 
     });
   };
 
-  // nickname null ise form göster
+  
   if (!nickname) return <NicknameForm onJoin={handleJoin} />;
 
   return (
