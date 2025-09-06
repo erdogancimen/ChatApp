@@ -1,12 +1,19 @@
 const redis = require("redis");
 
-const getClient = () => {
-	return redis.createClient({
-		host: process.env.REDIS_HOST,
-		port: process.env.REDIS_PORT,
-		password: process.env.REDIS_PASS,
-		db: 1,
-	});
-};
+// Tek bir client oluştur
+const client = redis.createClient({
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT,
+  password: process.env.REDIS_PASS,
+  db: 1,
+});
 
-module.exports.getClient = getClient;
+client.on("error", (err) => {
+  console.error("❌ Redis error:", err);
+});
+
+client.on("connect", () => {
+  console.log("✅ Redis connected");
+});
+
+module.exports = client;
