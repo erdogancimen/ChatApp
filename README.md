@@ -88,7 +88,5 @@ Mini Chat App/
 │   └── package.json
 └── README.md
 ```
+Erdoğan Çimen -  erdogan.cmn@hotmail.com
 
-
-
-Erdoğan Çimen - erdogan.cmn@hotmail.com
