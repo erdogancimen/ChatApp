@@ -1,0 +1,205 @@
+.chatlist {
+  flex: 1; /* kalan alanı kapla */
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0 10px; /* yan boşluklar */
+}
+
+.chatlist > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* minimum yükseklik */
+  width: 100%; /* tam genişlik */
+}
+
+.textInput {
+  flex: 1; /* kalan alanı kapla */
+  border: solid 1px #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  margin-right: 8px; /* buton ile arasında boşluk */
+  /* box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08); */
+}
+
+.chatItem {
+  border: 0.5px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08);
+  max-width: 50%; /* Balon genişliği */
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-bottom-left-radius: 0; /* balon ucu için */
+  border-bottom-right-radius: 20px;
+  background-color: #e5e5ea; /* karşı mesaj rengi */
+  word-wrap: break-word;
+  display: inline-block;
+  width: fit-content; /* içeriğe göre genişlik */
+}
+
+.chatItem.right {
+  background: #007bff;
+  color: white;
+  max-width: 50%; /* aynı maksimum genişlik */
+  margin-left: auto; /* sağa yaslar */
+  text-align: right;
+  border-bottom-right-radius: 0; /* balon ucu için */
+  border-bottom-left-radius: 20px;
+  width: fit-content; /* içeriğe göre genişlik */
+}
+
+.nicknameInput {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  border: solid 1px #ddd;
+  padding: 10px;
+  width: 380px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.nicknameForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px); /* tam ekran - 40px üst - 40px alt */
+  max-width: 480px; /* mobil genişlik */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  margin: 40px auto; /* yukarıdan ve aşağıdan 40px */
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* scroll tamamen kalkar */
+}
+
+.chatForm {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* input ile buton arasındaki boşluk */
+  padding: 10px;
+  margin: 10px; /* yan boşluklar */
+  flex-shrink: 0; /* küçülmesin */
+}
+.userevents {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 10px; /* yan boşluklar */
+  flex-shrink: 0; /* küçülmesin */
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.appBackground {
+  background-color: #f5f5f5;
+  min-height: 100vh; /* minimum tam ekran yüksekliği */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* container'ı üstten başlat */
+  padding: 0;
+}
+
+.nicknameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 733px;
+  max-width: 480px; /* mobil genişlik */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  margin: 40px auto; /* üstten ve alttan 60px, ortalama için auto */
+  margin-bottom: 100 px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* scroll tamamen kalkar */
+}
+
+.logoutButton {
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.itembalon {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.systemMessage {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  margin: 10px auto; /* üst-alt 10px, yanlar otomatik (ortalama) */
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  display: block;
+  max-width: 80%;
+  width: fit-content;
+}
+
+/* Mobil responsive tasarım */
+@media (max-width: 480px) {
+  .container {
+    height: calc(100vh - 80px); /* yine 40px üst ve alt margin */
+    max-width: calc(100vw - 20px); /* yan boşluklar için */
+    border-radius: 10px;
+    margin: 40px 10px; /* yukarıdan 40px, yanlardan 10px */
+  }
+  
+  .appBackground {
+    padding: 0;
+  }
+  
+  .chatlist {
+    margin: 0 5px;
+  }
+  
+  .chatForm {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  .userevents {
+    margin: 5px;
+    padding: 8px;
+  }
+  
+  .textInput {
+    font-size: 16px; /* iOS zoom'u önlemek için */
+  }
+}
